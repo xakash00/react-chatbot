@@ -26,8 +26,8 @@ export default function Headerlayout({ children }) {
       Label: "Home"
     },
    {
-    path:'/chatbot',
-    Label:"Chat-Bot"
+    path:'/gify',
+    Label:"Gify"
    }
   ];
 

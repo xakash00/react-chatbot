@@ -9,7 +9,7 @@ const Routing = () => {
     <Headerlayout>
       <Routes>
         <Route path="/" element={<ChatBot />} />
-        <Route path="/load-more" element={<Home />} />
+        <Route path="/gify" element={<Home />} />
       </Routes>
     </Headerlayout>
   );
