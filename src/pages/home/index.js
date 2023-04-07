@@ -5,6 +5,8 @@ import { UPDATE_OFFSET } from "../../redux/actions/types";
 import styled from "styled-components";
 import { useRef } from "react";
 import { Spinner } from "react-bootstrap";
+import LazyRender from "../../components/lazyRender";
+import ChatBot from "../../components/chatBot";
 const Home = () => {
   const dispatch = useDispatch();
   const data = useSelector((store) => store.gifsReducer);
@@ -48,8 +50,8 @@ const Home = () => {
         <div className="row">
           {data.giphs.map((g, i) => {
             return (
-              <div className="col-md-3">
-                <Gif key={i}>
+              <div key={i} className="col-md-6 col-xl-3 col-sm-12">
+                <Gif>
                   <div>
                     <img
                       className="card-img"

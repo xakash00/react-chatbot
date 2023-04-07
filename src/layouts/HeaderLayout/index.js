@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
-import { Header, Heading, ListItem, Margin, Sidebar, Toggle } from "../../styled/styles";
+import {
+  Header,
+  Heading,
+  ListItem,
+  Margin,
+  Sidebar,
+  Toggle,
+} from "../../styled/styles";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import { TOGGLE } from "../../redux/actions/types";
-import {GiHamburgerMenu} from "react-icons/gi"
+import { GiHamburgerMenu } from "react-icons/gi";
 import {
   closeSidebar,
-  toggleSidebar
+  toggleSidebar,
 } from "../../redux/actions/openSidebarAction";
 
 export default function Headerlayout({ children }) {
@@ -23,15 +29,14 @@ export default function Headerlayout({ children }) {
   const Menu = [
     {
       path: "/",
-      Label: "Home"
+      Label: "Home",
     },
-   {
-    path:'/gify',
-    Label:"Gify"
-   }
+    {
+      path: "/gify",
+      Label: "Gify",
+    },
   ];
 
-  
   return (
     <div className="lead">
       <Header
@@ -51,7 +56,7 @@ export default function Headerlayout({ children }) {
           rounded
           onClick={() => dispatch(toggleSidebar())}
         >
-          <GiHamburgerMenu/>
+          <GiHamburgerMenu />
         </Toggle>
       </Header>
 

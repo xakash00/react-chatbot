@@ -105,23 +105,7 @@ const ChatBot = () => {
         inputRef.focus()
       }, 1000);
     }
-    let time = ["What is the time|time|tell me the time|time|and time|and what is the time|"];
-    let words6 = new RegExp(time);
-    if (words6.test(document.querySelector("#input").value)) {
-      const status = document.querySelector(".status");
-      setTyping((p) => true);
-      getBotMessage.innerText = "Typing...";
-      setTimeout(() => {
-        getBotMessage.innerText = `The time is ${moment(new Date()).format(
-          "hh:mm:ss A"
-        )}`;
-        status.innerText = "Active";
-        status.style.color = "green";
-        inputRef.value = "";
-        setTyping(false);
-        inputRef.focus()
-      }, 1000);
-    }
+
     let day = ["What is the day|day|tell me the day|day|tell me the day|and day|and whats the day|and what is the day|and the day"];
     let words7 = new RegExp(day);
     if (words7.test(document.querySelector("#input").value)) {
@@ -154,6 +138,7 @@ const ChatBot = () => {
         inputRef.focus()
       }, 1000);
     }
+    
     getHumanMessage.innerText = inputRef.value;
   };
 
