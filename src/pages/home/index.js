@@ -5,8 +5,6 @@ import { UPDATE_OFFSET } from "../../redux/actions/types";
 import styled from "styled-components";
 import { useRef } from "react";
 import { Spinner } from "react-bootstrap";
-import LazyRender from "../../components/lazyRender";
-import ChatBot from "../../components/chatBot";
 const Home = () => {
   const dispatch = useDispatch();
   const data = useSelector((store) => store.gifsReducer);
@@ -14,6 +12,7 @@ const Home = () => {
   const [offset, setOffset] = useState(5);
   useEffect(() => {
     dispatch(getGifsAction(offset));
+    //eslint-disable-next-line
   }, [offset]);
 
   const loadMore = () => {
@@ -42,6 +41,7 @@ const Home = () => {
     if (ref.current) {
       observer.observe(ref.current);
     }
+    //eslint-disable-next-line
   }, [ref]);
 
   return (
@@ -77,7 +77,7 @@ const Home = () => {
             <span className="me-3">Loading</span>
             <Spinner animation="border" size="sm" color="#ccc" />
           </span>
-        ):"Load more..."}
+        ):""}
         </Button>
       </div>
     </div>
