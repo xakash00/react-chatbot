@@ -11,6 +11,9 @@ export const ChatBox = styled.div`
   height: 18em;
   width: 60%;
   padding: 10px;
+  @media (max-width: 768px) {
+    width:96%;
+  }
 `;
 export const Heading1 = styled.div`
   color: #28d;
@@ -25,7 +28,14 @@ export const HumanMessage = styled.div`
   border-radius: 5px;
   background-color: ${props=>props.color};
   color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
 `;
+
+export const Bullet = styled.span`
+font-size: 10px;
+`
 
 export const BotMessage = styled.div`
   width: 50%;
@@ -35,6 +45,9 @@ export const BotMessage = styled.div`
   border-radius: 5px;
   background-color: #ccc;
   color: #000;
+  text-align: center;
+  font-weight: 500;
+  font-size:15px
 `;
 export const ChatInputGroup = styled.form`
   /* border: 1px solid black; */
@@ -61,9 +74,10 @@ export const Input = styled.input`
 export const Button = styled.button`
   border: none;
   background-color: #28d;
-  padding: 10px;
+  padding: 10px 25px 10px;
   border-radius: 5px;
   float: right;
+  font-size: 12px;
   color: #fff;
   :disabled{
     background-color: #D4D4D4;
@@ -73,6 +87,8 @@ export const Button = styled.button`
 export const Status = styled.div`
   margin: 10px;
   font-weight: 600;
+  /* text-align: center; */
+
 `;
 
 export const size = {
@@ -108,6 +124,7 @@ export const Heading = styled.div`
   font-size: 25px;
   font-weight: 600;
   margin-left: 3rem;
+  /* text-align: center; */
 `;
 
 export const Content = styled.p`
@@ -145,6 +162,14 @@ export const Dflex = styled.div`
   align-items: center;
   z-index: 99;
 `;
+
+export const ContentBetween  = styled.div`
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  justify-content: space-between;
+  margin: 10px;
+`
 
 export const Tab = styled.div`
   overflow-x: hidden;
@@ -252,3 +277,5 @@ export const ListItem = styled.li`
 export const FixedDiv = styled.div`
   position: fixed;
 `;
+
+

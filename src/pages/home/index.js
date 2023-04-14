@@ -50,10 +50,10 @@ const Home = () => {
         <div className="row">
           {data.giphs.map((g, i) => {
             return (
-              <div key={i} className="col-md-6 col-xl-3 col-sm-12">
+              <div key={i} className="col-md-3 col-xl-2 ">
                 <Gif>
                   <div>
-                    <img
+                    <Image
                       className="card-img"
                       src={g.images.downsized.url}
                       alt={g.title}
@@ -92,10 +92,17 @@ const Button = styled.button`
   width: 100%;
 `;
 export const Gif = styled.div`
-  width: 20rem;
+  width: 100%;
   border-radius: 8px;
   margin-bottom: 10px;
 `;
 export const Margin = styled.div`
   height: 3rem;
 `;
+export const Image = styled.img`
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 10px;
+`

@@ -3,9 +3,11 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   BotMessage,
+  Bullet,
   Button,
   ChatBox,
   ChatInputGroup,
+  ContentBetween,
   Heading,
   HumanMessage,
   Input,
@@ -145,7 +147,9 @@ const ChatBot = () => {
   return (
     <div>
       <ChatBox>
-        <Heading>Chat-Bot</Heading> <Status className="status">Active</Status>
+        <ContentBetween>
+        <Heading>Chat-Bot</Heading> 
+        <Status className="status">Active</Status></ContentBetween>
         <HumanMessage
           color="#28d"
           id="message2"
